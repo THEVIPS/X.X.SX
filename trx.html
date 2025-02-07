@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Usdt Trx</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: #f44336;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-arrow:hover {
+            color: #d32f2f;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .qr-code {
+            margin: 20px 0;
+        }
+        .address {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .copy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #f44336;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .copy-button:hover {
+            background-color: #d32f2f;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="home.html" class="back-arrow" title="Volver">←</a>
+        <img src="//github.com/user-attachments/assets/afadc01f-5b72-43a2-80bc-a430c57731b7" alt=" alt="Shell Logo" class="logo" width="100">
+        <h2>Shell Usdt Trx</h2>
+        <div class="qr-code">
+            <a href="https://github.com/user-attachments/assets/22c94593-4c9e-406e-ac9c-18dc5afa3995" target="_blank">
+                <img src="https://github.com/user-attachments/assets/01cf5c4b-7f1c-4e2a-9d61-ebcb126cdc92" alt="Código QR" width="200">
+            </a>
+        </div>
+        <div class="address" id="address">TJBxMSBH24bpP7BYUVFf9NKL2bYujzwo2j</div>
+        <button class="copy-button" onclick="copyAddress()">Copiar Dirección</button>
+        <div class="footer">Recarga Minima $59.00 trx, cualquier depósito menor no será reembolsado ni añadido a su balance, descuento del 0.3% por depósito</div>
+    </div>
+
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('address').innerText;
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Dirección copiada al portapapeles: ' + address);
+            }).catch(err => {
+                alert('Error al copiar la dirección: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
