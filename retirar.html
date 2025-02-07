@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta Retiro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .balance {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .method-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .method-buttons button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      color: #333;
+      cursor: pointer;
+    }
+    .method-buttons button.active {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+    input[type="text"], input[type="password"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .confirm-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  .navbar {
+      background-color: #c80000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    .navbar img {
+      width: 18px;
+      height: 18px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cuenta Retiro</h2>
+    <p class="balance">Balance total:$0.00 <b id="balance">$0.00</b> USDT</p>
+    <div class="method-buttons">
+      <button class="active">TRC20-USDT</button>
+    </div>
+    <input type="number" id="amount" placeholder="Monto mínimo: 15 USDT">
+    <input type="text" id="address" placeholder="Dirección TRC20-USDT">
+    <input type="password" id="password" placeholder="Contraseña">
+    <div class="summary">
+      <p>Honorarios: <b>0.5% USDT</b></p>
+      <p>Realmente recibido: <b>0.00 USDT</b></p>
+      <p>Retiro Disponible USDT/TRC20 BNB BTC TRC BSC SOLANA DGB</p>
+    </div>
+    <button class="confirm-button" onclick="processWithdrawal()">Confirmar</button>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">
+      <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+      Hogar
+    </a>
+    <a href="tasks.html">
+      <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+      Tarea
+    </a>
+    <a href="team.html">
+      <img src="https://github.com/user-attachments/assets/d9546e0d-3b48-4ddf-9384-ca6600137f29" alt="Equipo">
+      Equipo
+    </a>
+    <a href="vip.html">
+      <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+      VIP
+    </a>
+    <a href="profile.html">
+      <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+      Perfil
+    </a>
+  </div>
+
+  <script>
+    function processWithdrawal() {
+      const balance = parseFloat(document.getElementById('balance').textContent);
+      const amount = parseFloat(document.getElementById('amount').value);
+      const address = document.getElementById('address').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (amount < 15) {
+        alert("Mínimo 15 USDT, recarga y vuelve a retirar");
+        return;
+      }
+
+      if (!address) {
+        alert("La dirección TRC20-USDT es obligatoria");
+        return;
+      }
+
+      if (!password) {
+        alert("La contraseña es obligatoria");
+        return;
+      }
+
+      if (amount > balance) {
+        alert("No tienes balance suficiente para retirar");
+        return;
+      }
+
+      alert("Retiro procesado con éxito deberas cubrir los gastos de envio de $10.00 USDT, sera enviado ahora mismo");
+    }
+  </script>
+</body>
+  </html>
