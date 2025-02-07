@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Usdt Trx</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #ffdd4b;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ffbf00;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .task-info {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .task-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .task-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .task-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .task-details {
+            flex-grow: 1;
+        }
+
+        .task-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .task-details p strong {
+            color: #333;
+        }
+
+        .task-actions {
+            text-align: right;
+        }
+
+        .task-actions button {
+            padding: 8px 15px;
+            background-color: #ff4b4b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+     .navbar {
+      background-color: #c80000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    .navbar img {
+      width: 18px;
+      height: 18px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Shell Usdt Trx</h1>
+        <p>Restablecer tarea en: <span id="countdown">24:00:00</span></p>
+    </div>
+
+    <div class="container">
+        <div class="task-info">
+            <p><strong>Todas las tareas para hoy:</strong> 0</p>
+            <p><strong>Las tareas pendientes de hoy:</strong> 0</p>
+        </div>
+
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/55af0672-bc48-48e5-8c76-2c509f1fc121" alt="Bonificación">
+            <div class="task-details">
+                <p><strong>Bonificación:</strong> 15 USDT</p>
+                <p><strong>Ganancia:</strong> 35 USDT</p>
+            </div>
+            <div class="task-actions">
+                <button id="completeBtn">Completar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="home.html">
+            <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+            Hogar
+        </a>
+        <a href="tasks.html">
+            <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+            Tarea
+        </a>
+        <a href="team.html">
+            <img src="//github.com/user-attachments/assets/d9546e0d-3b48-4ddf-9384-ca6600137f29" alt=" alt="Equipo">
+            Equipo
+        </a>
+        <a href="vip.html">
+            <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+            VIP
+        </a>
+        <a href="profile.html">
+            <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+            Perfil
+        </a>
+    </div>
+
+    <script>
+        // Configuración del cronómetro
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let hours = 24;
+            let minutes = 0;
+            let seconds = 0;
+
+            const interval = setInterval(() => {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        if (hours === 0) {
+                            clearInterval(interval);
+                            countdownElement.textContent = "00:00:00";
+                            return;
+                        }
+                        hours--;
+                        minutes = 59;
+                    }
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+
+                const h = hours.toString().padStart(2, '0');
+                const m = minutes.toString().padStart(2, '0');
+                const s = seconds.toString().padStart(2, '0');
+
+                countdownElement.textContent = `${h}:${m}:${s}`;
+            }, 1000);
+        }
+
+        document.getElementById('completeBtn').addEventListener('click', function () {
+            alert('Tarea Completada Balance enviado');
+        });
+
+        // Iniciar el cronómetro al cargar la página
+        startCountdown();
+    </script>
+</body>
+</html>
