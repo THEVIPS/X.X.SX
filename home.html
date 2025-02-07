@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shell Usdt Trx</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #c80000;
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .left-icons img,
+    header .right-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    header h1 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .carousel {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      animation: fade 20s infinite;
+    }
+
+    @keyframes fade {
+      0% { opacity: 1; }
+      20% { opacity: 0; }
+      40% { opacity: 1; }
+    }
+
+    .bonus-section {
+      background: #ffedd5;
+      color: #c80000;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      animation: popIn 1.5s ease-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .vip-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .vip-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      flex: 1 1 calc(20% - 20px); /* Ajuste para 5 tarjetas en lugar de 3 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: floatIn 1.5s ease-out;
+      position: relative;
+    }
+
+    .vip-card h3 {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+
+    .vip-card button {
+      background: #ff4500;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .vip-card button:hover {
+      background: #c80000;
+    }
+
+    /* Ajuste de las imágenes en las tarjetas VIP */
+    .vip-card img {
+      width: 80px; /* Ajusta el tamaño de la imagen */
+      height: 80px; /* Ajusta el tamaño de la imagen */
+      border-radius: 50%;
+      margin-bottom: 10px; /* Separación entre la imagen y el texto */
+      display: block; /* Centra la imagen */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Animación de retiros */
+    .withdrawal-section {
+      background-color: #f0f0f0;
+      padding: 15px;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      animation: slideIn 10s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2em;
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(50px); }
+      20% { opacity: 1; transform: translateX(0); }
+      60% { opacity: 1; transform: translateX(0); }
+      80% { opacity: 0; transform: translateX(-50px); }
+    }
+    .spacer{
+
+      height: 150px;
+      
+    }
+
+    .navbar {
+      background-color: #c80000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    .navbar img {
+      width: 18px;
+      height: 18px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="left-icons">
+      <img src="https://img.icons8.com/ios-filled/50/menu.png" alt="Menú" onclick="navigate('home.html')">
+    </div>
+    <h1>X.X.XS</h1>
+    <div class="right-icons">
+      <img src="https://github.com/user-attachments/assets/42e0b69a-3dc4-407e-9b35-5e33a9f993df" alt="Soporte" onclick="navigate('https://t.me/Vipsmining')">
+      <img src="https://img.icons8.com/ios-filled/50/settings.png" alt="Ajustes" onclick="navigate('home.html')">
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <img src="https://github.com/user-attachments/assets/6c90772f-854c-43c5-a310-1267a1641f39" alt="Imagen 1">
+    <img src="https://github.com/user-attachments/assets/40824add-5b13-4f59-b99f-2e7140961741" alt="Imagen 2">
+    <img src="https://github.com/user-attachments/assets/1cf777c8-6d6f-4278-8ede-154a92fd1516" alt="Imagen 3">
+    <img src="https://github.com/user-attachments/assets/85662882-e9e6-4696-884e-c672bb89fdf3" alt="Imagen 4">
+    <img src="https://github.com/user-attachments/assets/6c90772f-854c-43c5-a310-1267a1641f39" alt="Imagen 5">
+  </div>
+
+  <!-- Bonus Section -->
+  <div class="bonus-section">
+    ¡Invita a tus amigos y gana bonificaciones exclusivas!
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <section class="vip-section">
+      <!-- VIP Cards -->
+      <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+        <p>Precio: $16</p>
+        <p>Ganancia:$30</p>
+        <button onclick="navigate('recargar.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+        <p>Precio: $30</p>
+        <p>Gannacia: $45</p>
+        <button onclick="navigate('recargar.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+        <p>Precio: $45</p>
+        <p>Ganancia: $55</p>
+        <button onclick="navigate('recargar.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+        <p>Precio: $55</p>
+        <p>Ganancia:$65</p>
+        <button onclick="navigate('recargar.html')">Ir</button>
+      </div
+    </section>
+
+    <!-- Retiros Section -->
+    <div class="withdrawal-section">
+      <div>
+        <p>TNU con retiro de 55 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>VA con retiro de 45 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>US con retiro de 100 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>TG con retiro de 85 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>DH con retiro de 49 USDT ⭐️</p>
+      </div>
+    
+    </div>
+    <div>
+        
+    </div>
+    <div>
+    
+    </div>
+  </div>
+
+  <!-- Scoreboard -->
+  
+
+  <div class="spacer"></div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">
+      <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+      Hogar
+    </a>
+    <a href="tasks.html">
+      <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+      Tarea
+    </a>
+    <a href="team.html">
+      <img src="https://github.com/user-attachments/assets/d9546e0d-3b48-4ddf-9384-ca6600137f29" alt="Equipo">
+      Equipo
+    </a>
+    <a href="vip.html">
+      <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+      VIP
+    </a>
+    <a href="profile.html">
+      <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+      Perfil
+    </a>
+  </div>
+
+  <script>
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
