@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Levels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .vip-container {
+            padding: 20px;
+        }
+
+        .vip-section {
+            margin: 20px auto;
+            background-color: #fffff0;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        .vip-section h2 {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .vip-details {
+            background-color: #fff8dc;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .vip-details p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .vip-details p span {
+            font-weight: bold;
+            color: green;
+        }
+
+        .unlock {
+            margin-top: 15px;
+            background-color: #ff4500;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .spacer {
+            height: 150px;
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ff0000;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px 0;
+            border-top: 2px solid #e5e5e5;
+        }
+
+        .navbar a {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .navbar img {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: 0 auto 2px;
+        }
+
+        .navbar a span {
+            display: block;
+            font-size: 10px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>TASKVIPS - VIP Niveles</h1>
+    </div>
+
+    <div class="vip-container">
+        <div class="vip-section">
+            <h2>VIP1</h2>
+            <div class="vip-details">
+                <p>Tareas diarias: <span>1</span></p>
+                <p>Interés simple: <span>$16 USDT</span></p>
+                <p>Ganancia diaria: <span>$32 USDT</span></p>
+                <p>El beneficio total: <span>62 USDT</span></p>
+            
+                <a href="" class="unlock">Activado</a>
+            </div>
+        </div>
+
+        <div class="vip-section">
+            <h2>VIP2</h2>
+            <div class="vip-details">
+                <p>Tareas diarias: <span>1</span></p>
+                <p>Interés simple: <span>$30 USDT</span></p>
+                <p>Ganancia diaria: <span>$45 USDT</span></p>
+                <p>El beneficio total: <span>90.00 USDT</span></p>
+                <a href="recargar.html" class="unlock">30.00 USDT</a>
+            </div>
+        </div>
+            <div class="vip-section">
+            <h2>VIP3</h2>
+            <div class="vip-details">
+                <p>Tareas diarias: <span>1</span></p>
+                <p>Interés simple: <span>$45 USDT</span></p>
+                <p>Ganancia diaria: <span>$55 USDT</span></p>
+                <p>El beneficio total: <span>850 USDT</span></p>
+                
+                <a href="recargar.html" class="unlock">45.00 USDT</a>
+            </div>
+            </div>
+
+        </div>
+        
+    <div class="spacer"></div>
+
+    <div class="navbar">
+        <a href="home.html">
+            <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+            <span>Hogar</span>
+        </a>
+        <a href="tasks.html">
+            <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+            <span>Tarea</span>
+        </a>
+        <a href="team.html">
+            <img src="https://github.com/user-attachments/assets/d9546e0d-3b48-4ddf-9384-ca6600137f29" alt="Equipo">
+            <span>Equipo</span>
+        </a>
+        <a href="vip.html">
+            <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+            <span>VIP</span>
+        </a>
+        <a href="profile.html">
+            <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+            <span>Perfil</span>
+        </a>
+    </div>
+
+</body>
+</html>
