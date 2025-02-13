@@ -5,147 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X.X.XS Profile</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 500px;
-            margin: auto;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    .container {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ff0000;
-            padding: 10px;
-            color: white;
-        }
+    /* --- ENCABEZADO --- */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #C80000, #900000);
+        padding: 15px;
+        color: white;
+    }
 
-        .logo {
-            width: 50px;
-        }
+    .logo {
+        width: 50px;
+    }
 
-        .language-btn {
-            background: transparent;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    .language-btn {
+        background: none;
+        color: white;
+        border: 2px solid white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        .main {
-            padding: 20px;
-            text-align: center;
-        }
+    .language-btn:hover {
+        background-color: white;
+        color: #C80000;
+    }
 
-        .title {
-            color: #ff0000;
-            margin-bottom: 20px;
-        }
+    /* --- CONTENIDO PRINCIPAL --- */
+    .main {
+        padding: 25px;
+        text-align: center;
+    }
 
-        .account-info {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+    .title {
+        color: #C80000;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-        .email {
-            font-weight: bold;
-            color: #555;
-        }
+    .account-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
 
-        .profile-pic {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+    .email {
+        font-weight: bold;
+        color: #444;
+    }
 
-        .vip-level {
-            display: inline-block;
-            margin-top: 5px;
-            background-color: gold;
-            padding: 5px 10px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 14px;
-        }
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #C80000;
+    }
 
-        .balance {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+    .vip-level {
+        background-color: gold;
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 14px;
+    }
 
-        .balance div {
-            text-align: center;
-        }
+    /* --- BALANCES --- */
+    .balance {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
 
-        .sub-balances {
-            margin: 20px 0;
-        }
+    .balance div {
+        text-align: center;
+    }
 
-        .sub-balances div {
-            margin: 5px 0;
-        }
+    .sub-balances {
+        margin: 20px 0;
+    }
 
-        .options {
-            list-style: none;
-        }
+    .sub-balances div {
+        margin: 5px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
 
-        .option {
-            display: block;
-            padding: 10px;
-            color: #ff0000;
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid #ddd;
-        }
+    /* --- OPCIONES --- */
+    .options {
+        list-style: none;
+        padding: 10px;
+    }
 
-        .option:hover {
-            background-color: #ff0000;
-            color: white;
-        }
+    .option {
+        display: block;
+        padding: 12px;
+        margin: 5px 0;
+        background: #C80000;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        text-align: center;
+        transition: 0.3s;
+    }
 
-        .navbar {
-      background-color: #c80000;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      align-items: center;
+    .option:hover {
+        background-color: #900000;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+        background-color: #C80000;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        align-items: center;
     }
 
     .navbar a {
-      text-decoration: none;
-      color: white;
-      font-size: 0.8em;
-      text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 0.9em;
+        text-align: center;
     }
 
     .navbar img {
-      width: 18px;
-      height: 18px;
-      display: block;
-      margin: 0 auto 5px;
+        width: 22px;
+        height: 22px;
+        display: block;
+        margin: 0 auto 5px;
     }
     </style>
 </head>
